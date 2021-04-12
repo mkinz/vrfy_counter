@@ -60,17 +60,17 @@ def count_by_pptype():
 
 def main():
     """ main function, calls the other functions"""
-    get_regex()
-    print count_by_pptype()
-
-
-if __name__ == "__main__":
-    
+        
     # use argparse to get input filename and flag mgc or cats
     parser = argparse.ArgumentParser()
     parser.add_argument("filename", type=str, help="input filename of verify file to count instances of pptype")
     parser.add_argument("-v", "--vendor", choices=['mgc','MGC','cats','CATS', 'both'], type=str, help="fracture vendor")
     args = parser.parse_args()
-    
+        
+    get_regex()
+    print count_by_pptype()
+
+
+if __name__ == "__main__":
     main()
     
